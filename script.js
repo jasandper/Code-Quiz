@@ -20,20 +20,13 @@ function qNa() {
     $(".main-section").append($questionContainer)
 
     for (i=0; i<questions[0].answers.length; i++) {
-    var $answers = $("<button id=answer-" + i+1 + " >")
+    var $answers = $("<button>")
     $answers.text(questions[0].answers[i])
     $(".main-section").append($answers)
+    
     }
 
-    $("#answer-" + i+1).on("click", function() {
-        let answer1 = $("#answer-" + i+1)
-        console.log(answer1);
-            if (answer1 === questions[0].correctAnswer) {
-                alert("Correct!");
-} else {
-    alert("Wrong!");
-}
-    })
+
 }
 
 
